@@ -216,9 +216,7 @@
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="Username" />
                       <InArgument x:TypeArguments="ss:SecureString" x:Key="Password" />
-                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Element_Exist">
-                        <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="ElmentExist" />
-                      </OutArgument>
+                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Element_Exist">[ElmentExist]</OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </State.Entry>
@@ -298,9 +296,7 @@
                                 <State.Entry>
                                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Nevigate_To_CreateQuote.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379.3333333333333,114.66666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\Nevigate to left menu\Nevigate_To_CreateQuote.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
-                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="CreateQuoteExist">
-                                        <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="State_CreateQuote" />
-                                      </OutArgument>
+                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="CreateQuoteExist">[State_CreateQuote]</OutArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
                                 </State.Entry>
@@ -466,11 +462,12 @@
                                 <x:Int32 x:Key="DestConnectionPointIndex">53</x:Int32>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Transition.Condition>
-                              <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="BptravelRow Is Nothing" />
-                            </Transition.Condition>
+                            <Transition.Condition>[BptravelRow Is Nothing]</Transition.Condition>
                             <Transition.To>
-                              <State x:Name="__ReferenceID3" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,62.666666666666664" sap2010:WorkflowViewState.IdRef="State_10" IsFinal="True">
+                              <State x:Name="__ReferenceID3" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="380.6666666666667,226.66666666666663" sap2010:WorkflowViewState.IdRef="State_10" IsFinal="True">
+                                <State.Entry>
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="A" />
+                                </State.Entry>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">563,408.6666666666667</av:Point>
