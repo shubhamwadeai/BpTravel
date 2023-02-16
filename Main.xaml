@@ -466,7 +466,7 @@
                             <Transition.To>
                               <State x:Name="__ReferenceID3" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="380.6666666666667,226.66666666666663" sap2010:WorkflowViewState.IdRef="State_10" IsFinal="True">
                                 <State.Entry>
-                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="A" />
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="A b c" />
                                 </State.Entry>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
